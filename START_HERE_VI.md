@@ -1,10 +1,10 @@
-# Chạy CaseLens 2.3 và đưa lên GitHub
+# Chạy CaseLens và đưa lên GitHub
 
 ## Chạy trên Windows
 
 1. Giải nén toàn bộ bản mới vào thư mục riêng; đóng server cũ bằng Ctrl+C.
 2. Máy cần Python 3.11 trở lên. Nhấp `start_windows.bat`.
-3. Mở http://127.0.0.1:8000 và kiểm tra /api/config hiện version 2.3.0.
+3. Mở http://127.0.0.1:8000 và kiểm tra `/health` trả `{"status":"ok"}`.
 4. Sample replay chạy không cần key. Để dùng AI thật, chọn **API settings**,
    chọn provider/model, nhập key riêng trên máy, bấm **Use my key**.
 5. Chọn Live AI, chạy Atlas hoặc Cedar. Không gửi key vào chat.
@@ -53,4 +53,5 @@ Thay TEN_CUA_BAN bằng username. Nếu đã có repo/remote thì dùng repo đ�
 không chạy lại bước thêm remote. Đăng nhập GitHub khi Git yêu cầu.
 Chỉ đưa nội dung thư mục dự án lên repo; không tải ZIP hay các bản cũ vào repo.
 
-Tiếp tục theo [DEPLOY_VI.md](docs/DEPLOY_VI.md), rồi [SUBMISSION.md](docs/SUBMISSION.md).
+Sau khi triển khai, kiểm tra `/health` và `/api/config` trên URL công khai
+trước khi nộp URL ứng dụng cùng repository GitHub.

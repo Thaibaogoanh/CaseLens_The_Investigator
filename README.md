@@ -3,7 +3,7 @@
 Evidence-first investigation of customer escalations across tickets, emails and
 chat. Built for Anduin Hackathon 2026, Customer Success / The Investigator.
 
-**Version 2.3.0.** Live app: add your deployed URL here before submitting.
+Live app: add your deployed URL here before submitting.
 
 ## Experience the core workflow
 
@@ -66,7 +66,6 @@ inference. This is a model instruction and review process, not a truth guarantee
 | `static/` | Two JS modules, one CSS file, HTML and SVG icon |
 | `tests/`, `scripts/` | Backend tests, optional UI checks, evaluation, preflight |
 | `examples/` | Importable JSON, CSV and email examples |
-| `docs/` | Architecture, deployment, demo, evaluation and submission |
 | `Dockerfile`, `render.yaml` | Reproducible deployment configuration |
 
 ## Verify
@@ -89,18 +88,16 @@ python scripts/evaluate.py --mode live --stress --review --output artifacts/live
 
 Up to 16 provider attempts, normally fewer due to cache. Inspect the saved
 answers manually. Four authored scenarios are not an overall accuracy benchmark.
-See [verification](docs/TEST_REPORT.md) for executed checks and limitations.
 
 ## Deploy and submit
 
-Use a Render **Docker Web Service**, not a static site. Follow
-[DEPLOY_VI.md](docs/DEPLOY_VI.md). The Blueprint defaults to a Free service with
+Use a Render **Docker Web Service**, not a static site.
+The Blueprint defaults to a Free service with
 server AI disabled; visitors supply keys. A non-Free instance avoids Free
 spin-down for judging, subject to the plan you select in Render.
 
-Submit the public live URL and full public GitHub source. See
-[SUBMISSION.md](docs/SUBMISSION.md) for the public brief, rubric mapping and
-submission text; replace all URL placeholders before submitting.
+Submit the public live URL and full public GitHub source.
+Replace all URL placeholders before submitting.
 
 ## Scope and limitations
 

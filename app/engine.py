@@ -109,7 +109,7 @@ class Investigator:
         return {"ai_available": bool(override or (os.environ.get("ALLOW_SERVER_AI", "true").lower() == "true" and os.environ.get(prefix + "_API_KEY"))),
                 "provider": provider, "model": model,
                 "review_model": model if override else os.environ.get(prefix + "_REVIEW_MODEL") or model,
-                "version": "2.3.0", "max_sources": 60,
+                "max_sources": 60,
                 "privacy": f"Live AI sends selected sources to {provider}. Server caching is in memory only. Review the provider's data terms before importing private records."}
 
     def _call_ai(self, project, sources, question=None, review_claims=None):

@@ -10,3 +10,4 @@ Thumbs.db
 artifacts/
 *.log
 node_modules/
+/docs/

@@ -52,7 +52,7 @@ class RateLimiter:
 class Handler(BaseHTTPRequestHandler):
     engine = None
     limiter = RateLimiter()
-    server_version = "CaseLens/2.3.0"
+    server_version = "CaseLens"
 
     def setup(self):
         super().setup()

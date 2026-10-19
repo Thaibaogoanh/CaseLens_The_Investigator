@@ -1,7 +1,6 @@
 {
   "name": "caselens-investigator-checks",
   "private": true,
-  "version": "2.0.0",
   "description": "Optional DOM integration tests only; the application does not require Node.js.",
   "scripts": { "test": "node scripts/dom_test.cjs" },
   "devDependencies": { "jsdom": "26.1.0" }

@@ -145,7 +145,7 @@ async function restoreCaseFile(file) {
   try {
     if(file.size>8000000)throw new Error('Case files are limited to 8 MB.');
     const data=JSON.parse(await file.text());
-    if(data.format!=='caselens-case-file'||data.version!==2||!Array.isArray(data.versions)||data.versions.length>10)throw new Error('This is not a supported CaseLens v2 case file.');
+    if(data.format!=='caselens-case-file'||data.version!==2||!Array.isArray(data.versions)||data.versions.length>10)throw new Error('This is not a supported CaseLens case file.');
     const base=await api('/api/normalize',{project:data.project,sources:data.sources});
     const versions=[];
     tell('Restoring sources and rechecking each saved report. Imported AI-origin labels will not be trusted.');

@@ -44,7 +44,8 @@ def main():
             health=get_json(base+'/health');config=get_json(base+'/api/config')
             checks.append(dict(check='App health',status='pass' if health.get('status')=='ok' else 'fail'))
             checks.append(dict(check='Server AI key configured',status='pass' if config.get('ai_available') else 'fail',detail='Configuration presence only; does not prove provider access.'))
-            checks.append(dict(check='App version',status='pass' if config.get('version')=='2.3.0' else 'fail',detail=config.get('version')))
+            config_valid=config.get('provider') in ('openai','gemini') and bool(config.get('model')) and isinstance(config.get('max_sources'),int) and config['max_sources']>0
+            checks.append(dict(check='App configuration',status='pass' if config_valid else 'fail'))
         except (OSError,ValueError,urllib.error.URLError) as error:
             checks.append(dict(check='App reachable',status='fail',detail=type(error).__name__))
     else:
