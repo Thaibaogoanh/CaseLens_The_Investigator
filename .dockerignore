@@ -1,0 +1,10 @@
+# Only runtime source enters the Docker build context.
+*
+!Dockerfile
+!server.py
+!app/
+!app/**
+!static/
+!static/**
+**/__pycache__/
+**/*.pyc

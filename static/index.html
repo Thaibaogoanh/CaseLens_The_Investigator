@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CaseLens reconstructs customer escalations from tickets, email and chat, with evidence you can inspect.">
+  <title>CaseLens — The Investigator</title>
+  <link rel="icon" href="/favicon.svg"><link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script><script src="/extensions.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="CaseLens home"><span class="brand-icon">c<span>l</span></span><span>CaseLens<small>THE INVESTIGATOR</small></span></a>
+    <div class="top-right"><span class="event-label">AGENT IN THE SHELL / 2026</span><button id="personal-ai-btn" class="button secondary">API settings</button><span id="connection" class="connection">Connecting</span></div>
+  </header>
+  <div class="workspace">
+    <aside class="sidebar" aria-label="Investigation cases">
+      <div class="sidebar-title"><span class="eyebrow">YOUR WORKSPACE</span><span class="small-counter" id="case-count">03</span></div>
+      <h2>Case files</h2><p class="muted side-intro">Separate sources.<br>One clear story.</p>
+      <nav id="case-list" aria-label="Choose a case"></nav>
+      <button id="import-btn" class="button secondary import-btn">+ Import project</button>
+      <button id="tour-btn" class="text-button">Judge's 3-minute walkthrough ↗</button>
+      <div class="sidebar-note"><span class="note-icon">i</span><div><strong>Built for verification</strong><p>Every finding opens its source. Unknowns stay unknown.</p></div></div>
+      <div class="sidebar-footer">Fictional demo records<br><span>No customer systems connected</span></div>
+    </aside>
+    <main id="main">
+      <section class="project-header">
+        <div class="breadcrumb">INVESTIGATIONS <span>/</span> <span id="case-number">CASE 01</span></div>
+        <div class="project-heading"><div><div id="project-customer" class="eyebrow green-text"></div><h1 id="project-title">Loading your workspace…</h1><p id="project-description" class="muted"></p></div><button id="export-btn" class="button secondary" disabled>↓ Export brief</button></div>
+        <div class="source-strip" id="source-strip"></div>
+      </section>
+      <section class="control-card" aria-label="Investigation controls">
+        <div><label class="eyebrow" for="mode">INVESTIGATION ENGINE</label><select id="mode"><option value="sample">Sample replay</option><option value="live">Live AI</option></select></div>
+        <p id="mode-note">Curated example report. No model call.</p>
+        <button id="run-btn" class="button primary" disabled>Investigate case <span>↗</span></button>
+      </section>
+      <div id="message" class="message hidden" role="status" aria-live="polite"></div>
+      <div id="workspace-tools" class="workspace-tools"><button id="add-evidence-btn" class="button secondary" disabled>+ Add evidence</button><button id="bundle-btn" class="button secondary" disabled>↓ Save case file</button><button id="print-brief-btn" class="button secondary" disabled>↓ Printable brief</button><button id="restore-btn" class="button secondary">↑ Restore case file</button><input id="restore-file" type="file" accept=".json" class="hidden"><span id="scope-status" class="muted"></span></div>
+      <section id="supplement-box" class="supplement hidden"><div><strong>A new piece of the story</strong><p>A correction email has arrived. Add it to see how the evidence changes the conclusion.</p></div><button id="supplement-btn" class="button secondary">+ Add correction email</button></section>
+      <div class="content-grid">
+        <div class="report-column">
+          <section id="welcome" class="welcome"><svg class="welcome-symbol" width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="27" cy="26" r="17"/><path d="M39 39L56 56"/></svg><span class="eyebrow">FOLLOW THE EVIDENCE</span><h2>Know what happened.<br>Show how you know.</h2><p>Reconstruct the timeline, trace commitments, and separate facts from assumptions.</p><button id="welcome-run" class="text-button">Start this investigation ↗</button><div class="welcome-steps"><span>01 &nbsp; Gather context</span><span>02 &nbsp; Reconstruct</span><span>03 &nbsp; Verify</span></div></section>
+          <section id="report-area" class="hidden">
+            <div class="report-bar"><span id="report-label" class="eyebrow">INVESTIGATION REPORT</span><span id="report-time" class="muted"></span></div>
+            <nav class="tabs" aria-label="Report views"><button data-tab="overview" class="active" aria-pressed="true">Overview</button><button data-tab="timeline" aria-pressed="false">Timeline</button><button data-tab="commitments" aria-pressed="false">Commitments</button><button data-tab="map" aria-pressed="false">Evidence map</button><button data-tab="history" aria-pressed="false">Versions</button><button data-tab="review" aria-pressed="false">Review</button><button data-tab="checks" aria-pressed="false">Validation</button></nav>
+            <div id="report-content"></div>
+            <section class="ask-card"><span class="eyebrow">ASK THE EVIDENCE</span><h3>A follow-up, with sources.</h3><p id="ask-note" class="muted">Open-ended questions use Live AI and send this project's sources to the configured AI provider.</p><form id="ask-form"><label class="sr-only" for="question">Investigation question</label><input id="question" maxlength="1000" placeholder="Who made the commitment, and what changed?" required><button class="button primary" id="ask-btn" type="submit">Ask ↗</button></form><div id="answer" aria-live="polite"></div></section>
+          </section>
+        </div>
+        <aside class="evidence-panel" aria-label="Evidence browser"><div class="evidence-heading"><span class="eyebrow">SOURCE MATERIAL</span><h2>Evidence room <span id="evidence-count"></span></h2><p class="muted">Original records. Inspect before you conclude.</p></div>
+          <label class="sr-only" for="source-search">Search sources</label><input id="source-search" class="source-search" placeholder="Search source text…">
+          <div class="source-filters" aria-label="Filter sources"><button data-filter="all" class="active" aria-pressed="true">All</button><button data-filter="email" aria-pressed="false">Email</button><button data-filter="ticket" aria-pressed="false">Ticket</button><button data-filter="chat" aria-pressed="false">Chat</button></div>
+          <div id="source-list"></div><div id="source-detail" class="source-detail hidden" tabindex="-1"></div>
+        </aside>
+      </div>
+      <footer class="main-footer"><span>CaseLens / Evidence before conclusions.</span><span>Hackathon edition · v2.3</span></footer>
+    </main>
+  </div>
+  <dialog id="import-dialog"><form method="dialog"><button class="dialog-close" aria-label="Close import">×</button></form><span class="eyebrow">BRING YOUR OWN CONTEXT</span><h2>Import a project</h2><p>JSON, CSV or a plain-text EML email. Import sends content to this app's server for format checks, without calling AI. Use synthetic or authorized data.</p><label for="import-format">Format</label><select id="import-format"><option value="json">Project JSON</option><option value="csv">Source CSV</option><option value="eml">Email (.eml)</option></select><div id="import-metadata" class="hidden"><label for="import-project-id">Project ID</label><input id="import-project-id" placeholder="my-project" maxlength="80"><label for="import-title">Case title</label><input id="import-title" placeholder="An escalation to investigate" maxlength="200"><label for="import-customer">Customer</label><input id="import-customer" placeholder="Example customer" maxlength="200"></div><label for="import-file">Choose a file</label><input id="import-file" type="file" accept=".json,.csv,.eml"><label for="import-json">Or paste file content</label><textarea id="import-json" rows="10" placeholder='{"project":{"id":"demo","title":"My case","customer":"Example"},"sources":[…]}'></textarea><p id="import-error" class="error-text" role="alert"></p><button id="import-confirm" class="button primary">Validate & import</button></dialog>
+  <dialog id="evidence-dialog"><form method="dialog"><button class="dialog-close" aria-label="Close add evidence">×</button></form><span class="eyebrow">EXTEND THE RECORD</span><h2>Add a source</h2><p>One new record for this project. Previous investigation versions are preserved. A new live analysis is required for custom evidence.</p><form id="evidence-form"><div class="form-pair"><div><label for="evidence-id">Unique source ID</label><input id="evidence-id" required maxlength="80" pattern="[A-Za-z0-9_-]+"></div><div><label for="evidence-kind">Channel</label><select id="evidence-kind"><option value="email">Email</option><option value="ticket">Ticket</option><option value="chat">Chat</option></select></div></div><label for="evidence-author">Author</label><input id="evidence-author" required maxlength="200"><label for="evidence-time">Sent at (ISO timestamp with timezone)</label><input id="evidence-time" required placeholder="2026-10-17T10:00:00Z"><label for="evidence-title">Title</label><input id="evidence-title" required maxlength="300"><label for="evidence-body">Original source text</label><textarea id="evidence-body" required maxlength="12000" rows="7"></textarea><p id="evidence-error" class="error-text" role="alert"></p><button id="evidence-save" class="button primary" type="submit">Validate & add source</button></form></dialog>
+  <dialog id="tour-dialog"><form method="dialog"><button class="dialog-close" aria-label="Close walkthrough">×</button></form><span class="eyebrow">THREE MINUTES TO THE CORE</span><h2>Follow a conclusion as it changes.</h2><ol class="tour-list"><li><strong>Investigate Cedar.</strong> The receipt is missing. Notice the unknown status rather than a fabricated failure.</li><li><strong>Add the correction email.</strong> Reinvestigate. Open the receipt quote and the updated commitment.</li><li><strong>Open Versions.</strong> Compare the source sets and conclusions side by side.</li><li><strong>Open Evidence map.</strong> Exclude the correction source and rerun to see which conclusion loses support.</li><li><strong>Try Live AI + Review.</strong> With a server key configured, ask a question and request the second-pass evidence assessment.</li></ol><p>Sample replay uses authored reports. Live AI and semantic Review require API access. Sources, versions and reviewer notes stay in this tab unless you save a case file.</p><button id="tour-start" class="button primary">Open Cedar case ↗</button></dialog>
+<dialog id="personal-ai-dialog"><form method="dialog"><button class="dialog-close" aria-label="Close API settings">×</button></form><h2>Use your own API key</h2><p>Your key stays in this tab's memory until cleared or reloaded. Each AI request sends it through this app's server to the selected provider. Only enter a key on a deployment you trust, using HTTPS or localhost. It is not included in case exports or saved to browser storage.</p><form id="personal-ai-form"><label for="personal-provider">Provider</label><select id="personal-provider"><option value="gemini">Gemini</option><option value="openai">OpenAI</option></select><label for="personal-model">Model available to your project</label><input id="personal-model" value="gemini-3.8-flash" required maxlength="100" pattern="[A-Za-z0-9_.-]+"><label for="personal-key">API key</label><input id="personal-key" type="password" autocomplete="off" spellcheck="false" required maxlength="1024"><p id="personal-status" role="status"></p><button class="button primary" type="submit">Use my key</button><button id="personal-clear" class="button secondary" type="button">Clear my key / use server settings</button></form></dialog></body>
+</html>

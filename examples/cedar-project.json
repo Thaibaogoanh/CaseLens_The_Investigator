@@ -1,0 +1,45 @@
+{
+  "project": {
+    "id": "cedar",
+    "title": "The missing receipt",
+    "customer": "Cedar Ventures"
+  },
+  "sources": [
+    {
+      "id": "CDR-E01",
+      "project_id": "cedar",
+      "kind": "email",
+      "author": "Iris Nguyen \u00b7 Customer Success",
+      "sent_at": "2026-10-13T09:00:00Z",
+      "title": "SFTP delivery commitment",
+      "body": "I will deliver Cedar's first settlement file to SFTP by 18:00 UTC on 14 October. I own the delivery confirmation."
+    },
+    {
+      "id": "CDR-T01",
+      "project_id": "cedar",
+      "kind": "ticket",
+      "author": "Owen Tran \u00b7 Operations",
+      "sent_at": "2026-10-14T17:00:00Z",
+      "title": "CDR-31: File generated",
+      "body": "Settlement file generation completed at 16:50 UTC. SFTP upload confirmation is not attached to this ticket."
+    },
+    {
+      "id": "CDR-C01",
+      "project_id": "cedar",
+      "kind": "chat",
+      "author": "Owen Tran \u00b7 Operations",
+      "sent_at": "2026-10-14T17:10:00Z",
+      "title": "#cedar-ops",
+      "body": "I started the SFTP upload at 17:05 UTC. Waiting for the transfer receipt. File generation alone is not delivery confirmation."
+    },
+    {
+      "id": "CDR-E02",
+      "project_id": "cedar",
+      "kind": "email",
+      "author": "Lena Wu \u00b7 Cedar client",
+      "sent_at": "2026-10-15T08:00:00Z",
+      "title": "Where is the settlement file?",
+      "body": "I cannot find the settlement file in the folder I checked. Did delivery happen before yesterday's 18:00 UTC deadline?"
+    }
+  ]
+}

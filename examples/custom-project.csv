@@ -1,0 +1,4 @@
+id,project_id,kind,author,sent_at,title,body
+EX-E01,demo-import,email,Alex · Customer Success,2026-10-14T09:00:00Z,Report delivery commitment,I will deliver the approved reconciliation report by 17:00 UTC on 15 October. Delivery depends on compliance approval.
+EX-T01,demo-import,ticket,Robin · Analyst,2026-10-15T16:00:00Z,"Report prepared, approval missing","The reconciliation report is prepared. Compliance approval has not been received, and the report has not been sent to the client."
+EX-E02,demo-import,email,Jordan · Client,2026-10-15T18:00:00Z,Escalation: report not received,We have not received the report. Please confirm whether approval is complete and who will send the report.

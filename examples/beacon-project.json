@@ -1,0 +1,54 @@
+{
+  "project": {
+    "id": "beacon",
+    "title": "Done is not resolved",
+    "customer": "Beacon Partners"
+  },
+  "sources": [
+    {
+      "id": "BCN-E01",
+      "project_id": "beacon",
+      "kind": "email",
+      "author": "Ava Stone \u00b7 Customer Success",
+      "sent_at": "2026-10-14T08:00:00Z",
+      "title": "Export recovery promise",
+      "body": "I will restore Beacon's complete investor CSV export by 12:00 UTC on 15 October. Complete means all investor rows, not only active investors."
+    },
+    {
+      "id": "BCN-T01",
+      "project_id": "beacon",
+      "kind": "ticket",
+      "author": "Sam Roy \u00b7 Engineering",
+      "sent_at": "2026-10-15T10:00:00Z",
+      "title": "BCN-88: Status changed to Done",
+      "body": "BCN-88 status: Done. CSV endpoint responds with HTTP 200. The automated test checks active investors only; archived investor coverage was not tested."
+    },
+    {
+      "id": "BCN-C01",
+      "project_id": "beacon",
+      "kind": "chat",
+      "author": "Ava Stone \u00b7 Customer Success",
+      "sent_at": "2026-10-15T10:30:00Z",
+      "title": "#beacon-support",
+      "body": "The ticket says Done. I have not yet checked the client's full export and have not received client acceptance."
+    },
+    {
+      "id": "BCN-E02",
+      "project_id": "beacon",
+      "kind": "email",
+      "author": "Ben Li \u00b7 Beacon client",
+      "sent_at": "2026-10-15T13:00:00Z",
+      "title": "Export still incomplete",
+      "body": "Our 12:45 UTC export contains 800 of 1,000 expected investors. All 200 archived investors are missing. Please reopen this incident."
+    },
+    {
+      "id": "BCN-T02",
+      "project_id": "beacon",
+      "kind": "ticket",
+      "author": "Sam Roy \u00b7 Engineering",
+      "sent_at": "2026-10-15T14:00:00Z",
+      "title": "BCN-88: Reopened",
+      "body": "BCN-88 status: Reopened. The archived-investor filter is the confirmed cause of missing rows. Full-export recovery is not complete."
+    }
+  ]
+}

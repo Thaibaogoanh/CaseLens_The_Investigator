@@ -1,0 +1,72 @@
+{
+  "project": {
+    "id": "atlas",
+    "title": "The launch that slipped",
+    "customer": "Atlas Capital"
+  },
+  "sources": [
+    {
+      "id": "ATL-E01",
+      "project_id": "atlas",
+      "kind": "email",
+      "author": "Maya Chen \u00b7 Customer Success",
+      "sent_at": "2026-10-12T09:00:00Z",
+      "title": "Confirmed onboarding date",
+      "body": "We confirm that Atlas investor onboarding will go live by 17:00 UTC on 16 October. I am the delivery owner. This commitment assumes the signed mapping arrives by 14 October."
+    },
+    {
+      "id": "ATL-T01",
+      "project_id": "atlas",
+      "kind": "ticket",
+      "author": "Leo Park \u00b7 Engineering",
+      "sent_at": "2026-10-13T11:00:00Z",
+      "title": "ATL-142: Mapping dependency",
+      "body": "ATL-142 is blocked. The signed investor-field mapping has not arrived. Engineering cannot finalize the import until it is received."
+    },
+    {
+      "id": "ATL-C01",
+      "project_id": "atlas",
+      "kind": "chat",
+      "author": "Maya Chen \u00b7 Customer Success",
+      "sent_at": "2026-10-14T16:00:00Z",
+      "title": "#atlas-launch",
+      "body": "The signed mapping is still missing at 16:00 UTC on 14 October. I will request a revised launch date from the client; no new date is approved yet."
+    },
+    {
+      "id": "ATL-E02",
+      "project_id": "atlas",
+      "kind": "email",
+      "author": "Nora Diaz \u00b7 Atlas client",
+      "sent_at": "2026-10-15T09:00:00Z",
+      "title": "Signed mapping attached",
+      "body": "We delivered the signed mapping at 08:45 UTC today, 15 October. We still expect the Friday launch unless you confirm otherwise."
+    },
+    {
+      "id": "ATL-T02",
+      "project_id": "atlas",
+      "kind": "ticket",
+      "author": "Leo Park \u00b7 Engineering",
+      "sent_at": "2026-10-15T14:00:00Z",
+      "title": "ATL-142: Import built; QA pending",
+      "body": "The mapping was received at 08:45 UTC on 15 October. Import implementation is complete. End-to-end QA and client acceptance are still pending."
+    },
+    {
+      "id": "ATL-C02",
+      "project_id": "atlas",
+      "kind": "chat",
+      "author": "Maya Chen \u00b7 Customer Success",
+      "sent_at": "2026-10-16T15:00:00Z",
+      "title": "#atlas-launch: Unapproved revised date",
+      "body": "Engineering proposes 19 October for launch. This is a proposal only; the client has not approved it. Do not treat it as a replacement commitment."
+    },
+    {
+      "id": "ATL-E03",
+      "project_id": "atlas",
+      "kind": "email",
+      "author": "Nora Diaz \u00b7 Atlas client",
+      "sent_at": "2026-10-16T18:00:00Z",
+      "title": "Escalation: onboarding unavailable",
+      "body": "It is now 18:00 UTC on 16 October and investor onboarding is unavailable. You confirmed 17:00 UTC today. Please explain what happened and who owns the recovery."
+    }
+  ]
+}

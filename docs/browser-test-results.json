@@ -1,0 +1,22 @@
+{
+  "passed": 15,
+  "checks": [
+    "desktop app loads",
+    "native evidence click highlights a source",
+    "evidence matrix renders",
+    "new email updates investigation",
+    "version comparison visible",
+    "human review works without API",
+    "printable HTML download works",
+    "case file downloads",
+    "native file restore succeeds",
+    "source exclusion produces expected uncertainty",
+    "source search empty state works",
+    "390px mobile has no page-wide horizontal overflow",
+    "native import dialog opens and closes",
+    "judge walkthrough opens the case",
+    "no browser JavaScript errors"
+  ],
+  "browser": "134.0.6998.35",
+  "live_ai": false
+}

@@ -1,0 +1,641 @@
+{
+  "summary": {
+    "mode": "sample",
+    "model": "authored replay",
+    "generated_at": "2026-10-19T14:22:22.145273+00:00",
+    "passed": 4,
+    "total": 4,
+    "provider_attempts": 0,
+    "elapsed_seconds": 0.003,
+    "scope": "Selected scenario checks, not overall model accuracy. Human semantic assessment remains required."
+  },
+  "results": [
+    {
+      "case": "atlas",
+      "passed": true,
+      "checks": {
+        "provenance_accepted": true,
+        "chronological_order": true,
+        "condition_not_met": true,
+        "target_observed_overdue": true,
+        "no_false_completion": true,
+        "mapping_event_time": true
+      },
+      "elapsed_ms": 0,
+      "cached": false,
+      "cited_sources": 7,
+      "sources": 7,
+      "report": {
+        "summary": {
+          "title": "A launch commitment remains unresolved",
+          "statement": "Maya confirmed a conditional 16 October launch. The mapping arrived after the stated prerequisite date, a revised date was proposed but not approved, and the client reported onboarding unavailable after the committed time.",
+          "kind": "confirmed",
+          "evidence": [
+            {
+              "source_id": "ATL-E01",
+              "quote": "This commitment assumes the signed mapping arrives by 14 October."
+            },
+            {
+              "source_id": "ATL-E02",
+              "quote": "We delivered the signed mapping at 08:45 UTC today, 15 October."
+            },
+            {
+              "source_id": "ATL-C02",
+              "quote": "This is a proposal only; the client has not approved it."
+            },
+            {
+              "source_id": "ATL-E03",
+              "quote": "It is now 18:00 UTC on 16 October and investor onboarding is unavailable."
+            }
+          ]
+        },
+        "timeline": [
+          {
+            "occurred_at": "2026-10-12T09:00:00Z",
+            "title": "Launch commitment recorded",
+            "statement": "Conditional go-live confirmed for 16 October, 17:00 UTC.",
+            "actor": "Maya Chen",
+            "evidence": [
+              {
+                "source_id": "ATL-E01",
+                "quote": "We confirm that Atlas investor onboarding will go live by 17:00 UTC on 16 October."
+              }
+            ]
+          },
+          {
+            "occurred_at": "2026-10-13T11:00:00Z",
+            "title": "Dependency blocks engineering",
+            "statement": "Signed mapping is required before import can be finalized.",
+            "actor": "Leo Park",
+            "evidence": [
+              {
+                "source_id": "ATL-T01",
+                "quote": "Engineering cannot finalize the import until it is received."
+              }
+            ]
+          },
+          {
+            "occurred_at": "2026-10-14T16:00:00Z",
+            "title": "Prerequisite still missing",
+            "statement": "Customer Success plans to request a new date, without approval.",
+            "actor": "Maya Chen",
+            "evidence": [
+              {
+                "source_id": "ATL-C01",
+                "quote": "I will request a revised launch date from the client; no new date is approved yet."
+              }
+            ]
+          },
+          {
+            "occurred_at": "2026-10-15T08:45:00Z",
+            "title": "Mapping received",
+            "statement": "Event occurred at 08:45; reported by the client's 09:00 email and later ticket.",
+            "actor": "Nora Diaz",
+            "evidence": [
+              {
+                "source_id": "ATL-E02",
+                "quote": "We delivered the signed mapping at 08:45 UTC today, 15 October."
+              }
+            ]
+          },
+          {
+            "occurred_at": "2026-10-15T14:00:00Z",
+            "title": "Implementation complete; acceptance pending",
+            "statement": "Engineering completion does not establish launch readiness.",
+            "actor": "Leo Park",
+            "evidence": [
+              {
+                "source_id": "ATL-T02",
+                "quote": "End-to-end QA and client acceptance are still pending."
+              }
+            ]
+          },
+          {
+            "occurred_at": "2026-10-16T15:00:00Z",
+            "title": "New date proposed",
+            "statement": "19 October is proposed, not an agreed replacement deadline.",
+            "actor": "Maya Chen",
+            "evidence": [
+              {
+                "source_id": "ATL-C02",
+                "quote": "Engineering proposes 19 October for launch. This is a proposal only; the client has not approved it."
+              }
+            ]
+          },
+          {
+            "occurred_at": "2026-10-16T18:00:00Z",
+            "title": "Client escalates",
+            "statement": "Client reports unavailable onboarding after the promised time.",
+            "actor": "Nora Diaz",
+            "evidence": [
+              {
+                "source_id": "ATL-E03",
+                "quote": "It is now 18:00 UTC on 16 October and investor onboarding is unavailable."
+              }
+            ]
+          }
+        ],
+        "commitments": [
+          {
+            "owner": "Maya Chen",
+            "promise": "Launch Atlas investor onboarding, conditional on signed mapping by 14 October.",
+            "due": "16 October 2026 · 17:00 UTC",
+            "status": "overdue",
+            "condition": "Signed mapping arrives by 14 October.",
+            "condition_status": "not_met",
+            "status_reason": "The target time passed and the client explicitly reported onboarding unavailable. The mapping prerequisite was not met; this does not establish an unconditional breach or prove the cause of delay.",
+            "evidence": [
+              {
+                "source_id": "ATL-E01",
+                "quote": "We confirm that Atlas investor onboarding will go live by 17:00 UTC on 16 October. I am the delivery owner. This commitment assumes the signed mapping arrives by 14 October."
+              },
+              {
+                "source_id": "ATL-E02",
+                "quote": "We delivered the signed mapping at 08:45 UTC today, 15 October."
+              },
+              {
+                "source_id": "ATL-E03",
+                "quote": "It is now 18:00 UTC on 16 October and investor onboarding is unavailable."
+              }
+            ]
+          }
+        ],
+        "findings": [
+          {
+            "title": "The proposed date is not a new agreement",
+            "statement": "19 October has not replaced the original commitment because the client has not approved it.",
+            "kind": "confirmed",
+            "evidence": [
+              {
+                "source_id": "ATL-C02",
+                "quote": "Do not treat it as a replacement commitment."
+              }
+            ]
+          },
+          {
+            "title": "Late mapping is a plausible contributor",
+            "statement": "Late input may have compressed delivery time; the messages do not establish a causal link or allocation of responsibility.",
+            "kind": "inference",
+            "evidence": [
+              {
+                "source_id": "ATL-T01",
+                "quote": "Engineering cannot finalize the import until it is received."
+              },
+              {
+                "source_id": "ATL-E02",
+                "quote": "We delivered the signed mapping at 08:45 UTC today, 15 October."
+              }
+            ]
+          },
+          {
+            "title": "Current recovery readiness is unknown",
+            "statement": "The latest engineering evidence still lists QA and client acceptance as pending. No completed launch or recovery approval is evidenced.",
+            "kind": "unknown",
+            "evidence": [
+              {
+                "source_id": "ATL-T02",
+                "quote": "End-to-end QA and client acceptance are still pending."
+              }
+            ]
+          }
+        ],
+        "next_actions": [
+          "Ask Maya to obtain an explicitly approved recovery date from the client.",
+          "Verify end-to-end QA and client acceptance before confirming launch readiness.",
+          "Confirm the critical path with engineering before attributing the delay to one cause."
+        ]
+      },
+      "semantic_human_review": "pending"
+    },
+    {
+      "case": "beacon",
+      "passed": true,
+      "checks": {
+        "provenance_accepted": true,
+        "chronological_order": true,
+        "no_false_recovery": true,
+        "conflict_detected": true
+      },
+      "elapsed_ms": 2,
+      "cached": false,
+      "cited_sources": 5,
+      "sources": 5,
+      "report": {
+        "summary": {
+          "title": "Ticket completion did not mean customer recovery",
+          "statement": "The ticket was marked Done after an active-investor-only check. The client later reported 200 missing archived investors, and engineering reopened the incident with the filter identified as the cause.",
+          "kind": "confirmed",
+          "evidence": [
+            {
+              "source_id": "BCN-T01",
+              "quote": "The automated test checks active investors only; archived investor coverage was not tested."
+            },
+            {
+              "source_id": "BCN-E02",
+              "quote": "All 200 archived investors are missing."
+            },
+            {
+              "source_id": "BCN-T02",
+              "quote": "The archived-investor filter is the confirmed cause of missing rows."
+            }
+          ]
+        },
+        "timeline": [
+          {
+            "occurred_at": "2026-10-14T08:00:00Z",
+            "title": "Full export promised",
+            "statement": "All investors, including archived rows, are in scope.",
+            "actor": "Ava Stone",
+            "evidence": [
+              {
+                "source_id": "BCN-E01",
+                "quote": "Complete means all investor rows, not only active investors."
+              }
+            ]
+          },
+          {
+            "occurred_at": "2026-10-15T10:00:00Z",
+            "title": "Ticket marked Done",
+            "statement": "Only active investors were tested.",
+            "actor": "Sam Roy",
+            "evidence": [
+              {
+                "source_id": "BCN-T01",
+                "quote": "BCN-88 status: Done."
+              },
+              {
+                "source_id": "BCN-T01",
+                "quote": "The automated test checks active investors only; archived investor coverage was not tested."
+              }
+            ]
+          },
+          {
+            "occurred_at": "2026-10-15T10:30:00Z",
+            "title": "Acceptance unverified",
+            "statement": "Customer Success has not checked the complete output.",
+            "actor": "Ava Stone",
+            "evidence": [
+              {
+                "source_id": "BCN-C01",
+                "quote": "I have not yet checked the client's full export and have not received client acceptance."
+              }
+            ]
+          },
+          {
+            "occurred_at": "2026-10-15T12:45:00Z",
+            "title": "Client observes missing rows",
+            "statement": "The export observation precedes its 13:00 email report.",
+            "actor": "Ben Li",
+            "evidence": [
+              {
+                "source_id": "BCN-E02",
+                "quote": "Our 12:45 UTC export contains 800 of 1,000 expected investors."
+              }
+            ]
+          },
+          {
+            "occurred_at": "2026-10-15T14:00:00Z",
+            "title": "Incident reopened",
+            "statement": "Engineering confirms the archived filter as the missing-row cause.",
+            "actor": "Sam Roy",
+            "evidence": [
+              {
+                "source_id": "BCN-T02",
+                "quote": "The archived-investor filter is the confirmed cause of missing rows."
+              }
+            ]
+          }
+        ],
+        "commitments": [
+          {
+            "owner": "Ava Stone",
+            "promise": "Restore complete investor CSV export, including archived investors.",
+            "due": "15 October 2026 · 12:00 UTC",
+            "status": "overdue",
+            "condition": "Not stated",
+            "condition_status": "not_stated",
+            "status_reason": "The client observed an incomplete export after the 12:00 deadline and engineering later confirmed recovery was not complete.",
+            "evidence": [
+              {
+                "source_id": "BCN-E01",
+                "quote": "I will restore Beacon's complete investor CSV export by 12:00 UTC on 15 October."
+              },
+              {
+                "source_id": "BCN-T02",
+                "quote": "Full-export recovery is not complete."
+              }
+            ]
+          }
+        ],
+        "findings": [
+          {
+            "title": "Done conflicts with customer impact",
+            "statement": "The ticket's Done status was insufficient evidence of full recovery; the client's export was still incomplete afterward.",
+            "kind": "conflict",
+            "evidence": [
+              {
+                "source_id": "BCN-T01",
+                "quote": "BCN-88 status: Done."
+              },
+              {
+                "source_id": "BCN-E02",
+                "quote": "All 200 archived investors are missing."
+              }
+            ]
+          },
+          {
+            "title": "A cause is explicitly confirmed",
+            "statement": "Engineering identifies the archived-investor filter as the cause of missing rows. This supports a cause statement without inferring one from timing alone.",
+            "kind": "confirmed",
+            "evidence": [
+              {
+                "source_id": "BCN-T02",
+                "quote": "The archived-investor filter is the confirmed cause of missing rows."
+              }
+            ]
+          }
+        ],
+        "next_actions": [
+          "Test active and archived investor counts against the expected 1,000 rows.",
+          "Obtain client verification of the complete export before closing BCN-88.",
+          "Ask Ava to communicate an updated recovery commitment."
+        ]
+      },
+      "semantic_human_review": "pending"
+    },
+    {
+      "case": "cedar",
+      "passed": true,
+      "checks": {
+        "provenance_accepted": true,
+        "chronological_order": true,
+        "delivery_status": true,
+        "uncertainty_expressed": true
+      },
+      "elapsed_ms": 0,
+      "cached": false,
+      "cited_sources": 4,
+      "sources": 4,
+      "report": {
+        "summary": {
+          "title": "Delivery cannot yet be verified",
+          "statement": "The file was generated and an upload started, but neither event proves SFTP delivery. The client asks whether delivery occurred; no transfer receipt is available in this evidence set.",
+          "kind": "unknown",
+          "evidence": [
+            {
+              "source_id": "CDR-T01",
+              "quote": "SFTP upload confirmation is not attached to this ticket."
+            },
+            {
+              "source_id": "CDR-C01",
+              "quote": "Waiting for the transfer receipt."
+            }
+          ]
+        },
+        "timeline": [
+          {
+            "occurred_at": "2026-10-13T09:00:00Z",
+            "title": "SFTP delivery promised",
+            "statement": "Iris owns confirmation of a delivery due on 14 October.",
+            "actor": "Iris Nguyen",
+            "evidence": [
+              {
+                "source_id": "CDR-E01",
+                "quote": "I will deliver Cedar's first settlement file to SFTP by 18:00 UTC on 14 October."
+              }
+            ]
+          },
+          {
+            "occurred_at": "2026-10-14T16:50:00Z",
+            "title": "File generated",
+            "statement": "Generation occurred before the 17:00 ticket update.",
+            "actor": "Owen Tran",
+            "evidence": [
+              {
+                "source_id": "CDR-T01",
+                "quote": "Settlement file generation completed at 16:50 UTC."
+              }
+            ]
+          },
+          {
+            "occurred_at": "2026-10-14T17:05:00Z",
+            "title": "Upload started",
+            "statement": "An initiated transfer is not proof of delivery.",
+            "actor": "Owen Tran",
+            "evidence": [
+              {
+                "source_id": "CDR-C01",
+                "quote": "I started the SFTP upload at 17:05 UTC."
+              }
+            ]
+          },
+          {
+            "occurred_at": "2026-10-15T08:00:00Z",
+            "title": "Client requests confirmation",
+            "statement": "The client cannot find the file in the folder checked.",
+            "actor": "Lena Wu",
+            "evidence": [
+              {
+                "source_id": "CDR-E02",
+                "quote": "I cannot find the settlement file in the folder I checked."
+              }
+            ]
+          }
+        ],
+        "commitments": [
+          {
+            "owner": "Iris Nguyen",
+            "promise": "Deliver first settlement file to Cedar SFTP and confirm delivery.",
+            "due": "14 October 2026 · 18:00 UTC",
+            "status": "not_verified",
+            "condition": "Not stated",
+            "condition_status": "not_stated",
+            "status_reason": "Completion has not been verified from the available records.",
+            "evidence": [
+              {
+                "source_id": "CDR-E01",
+                "quote": "I own the delivery confirmation."
+              },
+              {
+                "source_id": "CDR-C01",
+                "quote": "Waiting for the transfer receipt."
+              }
+            ]
+          }
+        ],
+        "findings": [
+          {
+            "title": "Missing evidence is not proof of failed delivery",
+            "statement": "The evidence does not establish whether the upload completed. Calling the delivery late or failed would exceed the available facts.",
+            "kind": "unknown",
+            "evidence": [
+              {
+                "source_id": "CDR-C01",
+                "quote": "File generation alone is not delivery confirmation."
+              }
+            ]
+          }
+        ],
+        "next_actions": [
+          "Request the SFTP receipt with destination, completion time and file identity.",
+          "Ask the client to verify the destination folder.",
+          "Update the commitment status only after delivery evidence is available."
+        ]
+      },
+      "semantic_human_review": "pending"
+    },
+    {
+      "case": "cedar-corrected",
+      "passed": true,
+      "checks": {
+        "provenance_accepted": true,
+        "chronological_order": true,
+        "delivery_status": true,
+        "receipt_source_used": true,
+        "delivery_event_time": true
+      },
+      "elapsed_ms": 0,
+      "cached": false,
+      "cited_sources": 5,
+      "sources": 5,
+      "report": {
+        "summary": {
+          "title": "New evidence verifies on-time delivery",
+          "statement": "The client corrected the folder mistake, confirmed receipt at 17:22 UTC on 14 October and accepted the delivery as complete and on time. This resolves the earlier uncertainty.",
+          "kind": "confirmed",
+          "evidence": [
+            {
+              "source_id": "CDR-E03",
+              "quote": "Our SFTP receipt confirms the complete file arrived at 17:22 UTC on 14 October. We accept this delivery as complete and on time."
+            }
+          ]
+        },
+        "timeline": [
+          {
+            "occurred_at": "2026-10-13T09:00:00Z",
+            "title": "SFTP delivery promised",
+            "statement": "Iris owns confirmation of a delivery due on 14 October.",
+            "actor": "Iris Nguyen",
+            "evidence": [
+              {
+                "source_id": "CDR-E01",
+                "quote": "I will deliver Cedar's first settlement file to SFTP by 18:00 UTC on 14 October."
+              }
+            ]
+          },
+          {
+            "occurred_at": "2026-10-14T16:50:00Z",
+            "title": "File generated",
+            "statement": "Generation occurred before the 17:00 ticket update.",
+            "actor": "Owen Tran",
+            "evidence": [
+              {
+                "source_id": "CDR-T01",
+                "quote": "Settlement file generation completed at 16:50 UTC."
+              }
+            ]
+          },
+          {
+            "occurred_at": "2026-10-14T17:05:00Z",
+            "title": "Upload started",
+            "statement": "An initiated transfer is not proof of delivery.",
+            "actor": "Owen Tran",
+            "evidence": [
+              {
+                "source_id": "CDR-C01",
+                "quote": "I started the SFTP upload at 17:05 UTC."
+              }
+            ]
+          },
+          {
+            "occurred_at": "2026-10-14T17:22:00Z",
+            "title": "Delivery completed",
+            "statement": "The 15 October correction reports an earlier delivery time; timeline uses the event time.",
+            "actor": "Lena Wu",
+            "evidence": [
+              {
+                "source_id": "CDR-E03",
+                "quote": "Our SFTP receipt confirms the complete file arrived at 17:22 UTC on 14 October."
+              }
+            ]
+          },
+          {
+            "occurred_at": "2026-10-15T08:00:00Z",
+            "title": "Client requests confirmation",
+            "statement": "The client cannot find the file in the folder checked.",
+            "actor": "Lena Wu",
+            "evidence": [
+              {
+                "source_id": "CDR-E02",
+                "quote": "I cannot find the settlement file in the folder I checked."
+              }
+            ]
+          },
+          {
+            "occurred_at": "2026-10-15T10:00:00Z",
+            "title": "Client corrects the record",
+            "statement": "Client explains the folder mistake and accepts delivery.",
+            "actor": "Lena Wu",
+            "evidence": [
+              {
+                "source_id": "CDR-E03",
+                "quote": "Correction: I checked the wrong folder."
+              },
+              {
+                "source_id": "CDR-E03",
+                "quote": "We accept this delivery as complete and on time."
+              }
+            ]
+          }
+        ],
+        "commitments": [
+          {
+            "owner": "Iris Nguyen",
+            "promise": "Deliver first settlement file to Cedar SFTP and confirm delivery.",
+            "due": "14 October 2026 · 18:00 UTC",
+            "status": "fulfilled",
+            "condition": "Not stated",
+            "condition_status": "not_stated",
+            "status_reason": "The receipt and client acceptance establish completion before the deadline.",
+            "evidence": [
+              {
+                "source_id": "CDR-E01",
+                "quote": "I own the delivery confirmation."
+              },
+              {
+                "source_id": "CDR-C01",
+                "quote": "Waiting for the transfer receipt."
+              },
+              {
+                "source_id": "CDR-E03",
+                "quote": "We accept this delivery as complete and on time."
+              }
+            ]
+          }
+        ],
+        "findings": [
+          {
+            "title": "Conclusion changed because the evidence changed",
+            "statement": "The previously unverified delivery is now supported by a client-confirmed receipt. The earlier question is retained in the timeline instead of being erased.",
+            "kind": "confirmed",
+            "evidence": [
+              {
+                "source_id": "CDR-E02",
+                "quote": "Did delivery happen before yesterday's 18:00 UTC deadline?"
+              },
+              {
+                "source_id": "CDR-E03",
+                "quote": "We accept this delivery as complete and on time."
+              }
+            ]
+          }
+        ],
+        "next_actions": [
+          "Attach the confirmed SFTP receipt to CDR-31.",
+          "Record the verified folder path in the delivery runbook to prevent a repeat search error."
+        ]
+      },
+      "semantic_human_review": "pending"
+    }
+  ]
+}

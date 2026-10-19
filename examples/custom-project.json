@@ -1,0 +1,36 @@
+{
+  "project": {
+    "id": "demo-import",
+    "title": "An approval still outstanding",
+    "customer": "Example Customer"
+  },
+  "sources": [
+    {
+      "id": "EX-E01",
+      "project_id": "demo-import",
+      "kind": "email",
+      "author": "Alex \u00b7 Customer Success",
+      "sent_at": "2026-10-14T09:00:00Z",
+      "title": "Report delivery commitment",
+      "body": "I will deliver the approved reconciliation report by 17:00 UTC on 15 October. Delivery depends on compliance approval."
+    },
+    {
+      "id": "EX-T01",
+      "project_id": "demo-import",
+      "kind": "ticket",
+      "author": "Robin \u00b7 Analyst",
+      "sent_at": "2026-10-15T16:00:00Z",
+      "title": "Report prepared, approval missing",
+      "body": "The reconciliation report is prepared. Compliance approval has not been received, and the report has not been sent to the client."
+    },
+    {
+      "id": "EX-E02",
+      "project_id": "demo-import",
+      "kind": "email",
+      "author": "Jordan \u00b7 Client",
+      "sent_at": "2026-10-15T18:00:00Z",
+      "title": "Escalation: report not received",
+      "body": "We have not received the report. Please confirm whether approval is complete and who will send the report."
+    }
+  ]
+}

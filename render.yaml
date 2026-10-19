@@ -1,0 +1,19 @@
+# Review the selected plan and settings in Render before creating the service.
+services:
+  - type: web
+    name: caselens-investigator
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+      - key: AI_PROVIDER
+        value: gemini
+      - key: GEMINI_MODEL
+        value: gemini-3.8-flash
+      - key: ALLOW_SERVER_AI
+        value: "false"
+      - key: AI_DAILY_CALL_LIMIT
+        value: "50"
